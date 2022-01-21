@@ -18,7 +18,11 @@ jobs:
       steps:
         - checkout
         - add_ssh_keys:
-            fingerprints: ["59:cf:23:23:13:52:30:4b:48:7a:aa:47:15:ee:34:4d"] 
+            fingerprints: ["59:cf:23:23:13:52:30:4b:48:7a:aa:47:15:ee:34:4d"]
+        - run:
+            name: Install Python
+            command: |
+              apk add py3-pip 
         - run:
             name: Install Ansible
             command: |
